@@ -6,8 +6,8 @@ public class MyLinkedList<E> implements MyList<E>{
     private int size;
 
     public MyLinkedList(){
-        lstNode = new Node<E>(null, fstNode, null);
-        fstNode = new Node<E>(null, null, lstNode);
+        fstNode = new Node<E>(null, lstNode, lstNode);
+        lstNode = new Node<E>(null, fstNode, fstNode);
         this.size = 0;
     }
 
@@ -15,7 +15,7 @@ public class MyLinkedList<E> implements MyList<E>{
     public void addFirst(E element) {
         Node<E> next = fstNode;
         next.setCurrentElement(element);
-        fstNode = new Node<>(null, null, fstNode);
+        fstNode = new Node<>(null, lstNode, fstNode);
         next.setPrevElement(fstNode);
         size++;
     }
@@ -24,7 +24,7 @@ public class MyLinkedList<E> implements MyList<E>{
     public void addLast(E element) {
         Node<E> prev = lstNode;
         prev.setCurrentElement(element);
-        lstNode = new Node<>(null, prev, null);
+        lstNode = new Node<>(null, prev, fstNode);
         prev.setNextElement(lstNode);
         size++;
     }
