@@ -6,8 +6,9 @@ import LinkedList.MyList;
 public class Main {
     public static void main(String[] args) {
         MyLinkedList<String> strLink = new MyLinkedList<>();
+
         strLink.addLast("213");
-        strLink.addLast("kek");
+        strLink.addLast("4324");
         strLink.addFirst("Sasha");
         System.out.println(strLink.size());
         System.out.println(strLink.get(1));
