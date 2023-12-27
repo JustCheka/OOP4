@@ -11,7 +11,8 @@ public class Main {
         strLink.addLast("4324");
         strLink.addFirst("Sasha");
         System.out.println(strLink.size());
-        System.out.println(strLink.get(1));
+        System.out.println(strLink.get(2));
         System.out.println(strLink.get(0));
+        System.out.println(strLink.get(1));
     }
 }
